@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domain-kamu.com/sitemap.xml

@@ -1,0 +1,63 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --color-primary: #1B7A3D;
+  --color-secondary: #6BA68A;
+  --color-accent: #F5A623;
+  --color-accent-light: #F5D08A;
+  --color-dark: #1a1a1a;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-dark);
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, .font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+/* Sparkle animation for hero */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+.sparkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+/* Accessibility Classes */
+body.accessibility-high-contrast { filter: contrast(1.4); }
+body.accessibility-grayscale { filter: grayscale(1); }
+body.accessibility-high-contrast.accessibility-grayscale { filter: contrast(1.4) grayscale(1); }
+body.accessibility-highlight-links a { outline: 2px solid #F5A623 !important; outline-offset: 2px; }
+body.accessibility-large-text { font-size: 120% !important; }
+body.accessibility-letter-spacing, body.accessibility-letter-spacing * { letter-spacing: 0.12em !important; }
+body.accessibility-pause-animations *, body.accessibility-pause-animations *::before, body.accessibility-pause-animations *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; }
+body.accessibility-no-images img { opacity: 0 !important; }
+body.accessibility-dyslexia-font, body.accessibility-dyslexia-font * { font-family: 'Comic Sans MS', 'OpenDyslexic', cursive !important; }
+body.accessibility-big-cursor, body.accessibility-big-cursor * { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="black" stroke="white" stroke-width="2" d="M4 4l5.5 16.5 2.5-6.5 6.5-2.5z"/></svg>') 16 16, auto !important; }
+body.accessibility-tooltips [title] { position: relative; }
+body.accessibility-tooltips [title]:hover::after { content: attr(title); position: absolute; background: #333; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; white-space: nowrap; z-index: 9999; top: 100%; left: 0; pointer-events: none; }
+body.accessibility-line-height, body.accessibility-line-height * { line-height: 2 !important; }
+body.accessibility-text-align, body.accessibility-text-align * { text-align: left !important; }

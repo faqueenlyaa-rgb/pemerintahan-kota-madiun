@@ -1,0 +1,11 @@
+.leaflet-container .leaflet-interactive:focus {
+  outline: none !important;
+}
+
+.leaflet-container svg path:focus {
+  outline: none !important;
+}
+
+.leaflet-container svg path {
+  outline: none !important;
+}

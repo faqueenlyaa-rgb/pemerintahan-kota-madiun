@@ -1,0 +1,41 @@
+{
+  "updatedYear": 2026,
+  "overall": {
+    "name": "Kota Madiun",
+    "density": 7388,
+    "densityUnit": "jiwa/km²",
+    "femalePercent": 50.9,
+    "malePercent": 49.1,
+    "productiveAge": 71.18,
+    "productiveLabel": "Kategori tinggi"
+  },
+  "districts": {
+    "taman": {
+      "name": "Kecamatan Taman",
+      "density": 8200,
+      "densityUnit": "jiwa/km²",
+      "femalePercent": 51.1,
+      "malePercent": 48.9,
+      "productiveAge": 71.5,
+      "productiveLabel": "Kategori tinggi"
+    },
+    "kartoharjo": {
+      "name": "Kecamatan Kartoharjo",
+      "density": 7600,
+      "densityUnit": "jiwa/km²",
+      "femalePercent": 50.6,
+      "malePercent": 49.4,
+      "productiveAge": 70.8,
+      "productiveLabel": "Kategori tinggi"
+    },
+    "manguharjo": {
+      "name": "Kecamatan Manguharjo",
+      "density": 7100,
+      "densityUnit": "jiwa/km²",
+      "femalePercent": 50.9,
+      "malePercent": 49.1,
+      "productiveAge": 71.0,
+      "productiveLabel": "Kategori tinggi"
+    }
+  }
+}
