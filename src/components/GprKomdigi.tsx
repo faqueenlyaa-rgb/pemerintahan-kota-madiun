@@ -149,8 +149,8 @@ export function GprKomdigi() {
         }
 
         const data: GprArticle[] = result.items
-          .slice(0, 3)
-          .map((item: any) => ({
+        .slice(0, 12)
+        .map((item: any) => ({
             title: item.title || 'Tanpa judul',
             link: item.link || 'https://www.komdigi.go.id/berita/artikel-gpr',
             date: formatDate(item.pubDate),
@@ -292,8 +292,8 @@ export function GprKomdigi() {
               GPR KOMDIGI
             </a>
 
-            <div className="border-4 border-accent rounded-2xl p-1 flex-1 overflow-hidden bg-white">
-              <div className="h-full overflow-y-auto pr-2 space-y-4 p-3">
+            <div className="border-4 border-accent rounded-2xl p-1 bg-white">
+              <div className="max-h-[430px] overflow-y-auto pr-2 space-y-4 p-3">
                 {loading && (
                   <p className="text-sm text-gray-500 text-center py-6">
                     Memuat berita terbaru...
