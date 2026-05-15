@@ -712,7 +712,13 @@ export function FasilitasPage() {
     }));
   };
 
-  const isSectionOpen = (sectionKey: string) => openSections[sectionKey] ?? true;
+  const isSectionOpen = (sectionKey: string) => {
+    if (selectedCategory !== 'all' && selectedCategory === sectionKey) {
+      return true;
+    }
+
+    return openSections[sectionKey] ?? false;
+  };
 
   const filteredItems = fasilitasItems
     .filter((item) => {
