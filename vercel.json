@@ -1,4 +1,11 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+
   "headers": [
     {
       "source": "/(.*)",
@@ -22,6 +29,10 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         },
         {
           "key": "Content-Security-Policy",
