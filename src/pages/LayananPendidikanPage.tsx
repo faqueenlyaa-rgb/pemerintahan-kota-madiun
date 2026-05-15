@@ -84,7 +84,7 @@ export function LayananPendidikanPage() {
           ? 'Madiun education services, schools in Madiun, PPDB Madiun, student services Madiun, education information Madiun'
           : 'layanan pendidikan Kota Madiun, sekolah di Madiun, PPDB Madiun, layanan siswa Madiun, informasi pendidikan Madiun'
       }
-      url="https://domain-kamu.com/layanan/pendidikan"
+      url="https://pemerintahan-kota-madiun.vercel.app/layanan/pendidikan"
       lang={lang}
       structuredData={[
         {

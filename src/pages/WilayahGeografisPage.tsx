@@ -74,7 +74,7 @@ export function WilayahGeografisPage() {
       title="Wilayah Geografis Kota Madiun"
       description="Informasi letak geografis Kota Madiun, posisi strategis, jalur transportasi, serta batas wilayah administrasi Kota Madiun."
       keywords="Wilayah Geografis Kota Madiun, letak Kota Madiun, batas wilayah Kota Madiun, geografis Madiun"
-      url="https://domain-kamu.com/profil/wilayah-geografis"
+      url="https://pemerintahan-kota-madiun.vercel.app/profil/wilayah-geografis"
       lang="id"
       structuredData={[
         {

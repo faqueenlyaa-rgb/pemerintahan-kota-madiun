@@ -12,7 +12,7 @@ export function LowonganPage() {
         title="Lowongan Kota Madiun"
         description="Halaman lowongan Kota Madiun berisi informasi peluang kerja, rekrutmen, dan lowongan yang berkaitan dengan Kota Madiun."
         keywords="Lowongan Kota Madiun, lowongan kerja Madiun, rekrutmen Madiun, informasi kerja Madiun"
-        url="https://domain-kamu.com/madiun-terkini/lowongan"
+        url="https://pemerintahan-kota-madiun.vercel.app/madiun-terkini/lowongan"
         lang="id"
         structuredData={{
           '@context': 'https://schema.org',

@@ -12,7 +12,7 @@ type SEOProps = {
 };
 
 const DEFAULT_SITE_NAME = 'Pemerintah Kota Madiun';
-const DEFAULT_SITE_URL = 'https://domain-kamu.com';
+const DEFAULT_SITE_URL = 'https://pemerintahan-kota-madiun.vercel.app/';
 const DEFAULT_IMAGE = 'https://www.madiunkota.go.id/image/Lambang_Kota_Madiun.png';
 
 function setMeta(attribute: 'name' | 'property', key: string, content: string) {

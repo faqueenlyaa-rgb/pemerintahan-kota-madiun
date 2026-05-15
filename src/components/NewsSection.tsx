@@ -92,15 +92,15 @@ export function NewsSection() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left Column - Berita Pemerintahan */}
-          <div>
-            <div className="mb-6 flex items-center justify-between gap-4">
-              <h3 className="flex items-center gap-2 font-poppins text-2xl font-black text-primary md:text-3xl">
+          <div className="min-w-0">
+            <div className="mb-6 flex min-h-[96px] items-center justify-between gap-4">
+              <h3 className="flex items-center gap-2 font-poppins text-2xl font-black leading-tight text-primary md:text-3xl">
                 {t('news.govNews')}
               </h3>
 
               <Link
                 to="/madiun-terkini/berita-pemerintahan"
-                className="flex items-center gap-2 whitespace-nowrap rounded-full bg-[#237227] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-[#06451F]"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-[#237227] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-[#06451F]"
               >
                 <Eye className="h-4 w-4" />
                 {t('news.viewAll')}
@@ -118,9 +118,9 @@ export function NewsSection() {
                 >
                   <Link
                     to={`/madiun-terkini/berita-pemerintahan/${news.slug}`}
-                    className="group flex flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-white shadow-md transition-all duration-300 hover:border-[#237227] hover:shadow-xl sm:flex-row"
+                    className="group flex h-[320px] flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-white shadow-md transition-all duration-300 hover:border-[#237227] hover:shadow-xl sm:h-[205px] sm:flex-row"
                   >
-                    <div className="relative h-40 w-full shrink-0 overflow-hidden sm:h-auto sm:w-40">
+                    <div className="relative h-[150px] w-full shrink-0 overflow-hidden sm:h-full sm:w-[180px]">
                       <img
                         src={news.image}
                         alt={news.title[lang]}
@@ -130,7 +130,7 @@ export function NewsSection() {
                       <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-transparent" />
                     </div>
 
-                    <div className="flex-1 p-5">
+                    <div className="flex min-w-0 flex-1 flex-col justify-center overflow-hidden p-5">
                       <h4 className="mb-2 line-clamp-2 font-poppins text-lg font-bold text-dark transition-colors group-hover:text-[#237227]">
                         {news.title[lang]}
                       </h4>
@@ -151,9 +151,9 @@ export function NewsSection() {
           </div>
 
           {/* Right Column - Madiun Today */}
-          <div>
-            <div className="mb-6 flex items-center justify-between gap-4">
-              <h3 className="flex items-center gap-2 font-poppins text-2xl font-black text-primary md:text-3xl">
+          <div className="min-w-0">
+            <div className="mb-6 flex min-h-[96px] items-center justify-between gap-4">
+              <h3 className="flex items-center gap-2 font-poppins text-2xl font-black leading-tight text-primary md:text-3xl">
                 {t('news.madiunToday')}
               </h3>
 
@@ -161,7 +161,7 @@ export function NewsSection() {
                 href="https://madiuntoday.id/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 whitespace-nowrap rounded-full bg-[#237227] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-[#06451F]"
+                className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-[#237227] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-[#06451F]"
               >
                 <Eye className="h-4 w-4" />
                 {t('news.viewAll')}
@@ -181,9 +181,9 @@ export function NewsSection() {
                     href={news.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-white shadow-md transition-all duration-300 hover:border-[#237227] hover:shadow-xl sm:flex-row"
+                    className="group flex h-[320px] flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-white shadow-md transition-all duration-300 hover:border-[#237227] hover:shadow-xl sm:h-[205px] sm:flex-row"
                   >
-                    <div className="relative h-40 w-full shrink-0 overflow-hidden sm:h-auto sm:w-40">
+                    <div className="relative h-[150px] w-full shrink-0 overflow-hidden sm:h-full sm:w-[180px]">
                       <img
                         src={news.image}
                         alt={news.title[lang]}
@@ -193,7 +193,7 @@ export function NewsSection() {
                       <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-transparent" />
                     </div>
 
-                    <div className="flex-1 p-5">
+                    <div className="flex min-w-0 flex-1 flex-col justify-center overflow-hidden p-5">
                       <h4 className="mb-2 line-clamp-2 font-poppins text-lg font-bold text-dark transition-colors group-hover:text-[#237227]">
                         {news.title[lang]}
                       </h4>

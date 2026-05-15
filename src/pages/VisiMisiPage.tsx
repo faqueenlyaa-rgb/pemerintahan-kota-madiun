@@ -13,7 +13,7 @@ export function VisiMisiPage() {
       title="Visi dan Misi Kota Madiun"
       description="Informasi visi dan misi Pemerintah Kota Madiun dalam mewujudkan pemerintahan maju, bersih, berwibawa, serta membangun Kota Madiun yang mendunia bersama masyarakat."
       keywords="Visi Misi Kota Madiun, Pemerintah Kota Madiun, profil Kota Madiun, Kota Pendekar"
-      url="https://domain-kamu.com/profil/visi-misi"
+      url="https://pemerintahan-kota-madiun.vercel.app/profil/visi-misi"
       lang="id"
       structuredData={{
         '@context': 'https://schema.org',

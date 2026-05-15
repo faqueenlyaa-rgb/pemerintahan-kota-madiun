@@ -81,13 +81,13 @@ export function App() {
                     title="Portal Pemerintah Kota Madiun"
                     description="Portal informasi Pemerintah Kota Madiun berisi layanan publik, berita pemerintahan, profil kota, UMKM, info pasar, wisata, kuliner, fasilitas, dan informasi Madiun terkini."
                     keywords="Kota Madiun, Pemerintah Kota Madiun, layanan publik Madiun, berita Madiun, UMKM Madiun, info pasar Madiun, wisata Madiun"
-                    url="https://domain-kamu.com/"
+                    url="https://pemerintahan-kota-madiun.vercel.app/"
                     lang="id"
                     structuredData={{
                       '@context': 'https://schema.org',
                       '@type': 'GovernmentOrganization',
                       name: 'Pemerintah Kota Madiun',
-                      url: 'https://domain-kamu.com/',
+                      url: 'https://pemerintahan-kota-madiun.vercel.app/',
                       logo: 'https://www.madiunkota.go.id/image/Lambang_Kota_Madiun.png',
                       address: {
                         '@type': 'PostalAddress',

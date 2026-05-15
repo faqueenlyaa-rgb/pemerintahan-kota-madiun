@@ -101,7 +101,7 @@ export function LayananInfoPasarPage() {
         title="Info Pasar Kota Madiun"
         description="Halaman Info Pasar Kota Madiun menyediakan akses ke layanan Marketplace, UMKM, dan E-Sayur melalui portal resmi yang tersedia."
         keywords="Info Pasar Madiun, Marketplace Madiun, UMKM Madiun, E-Sayur Madiun, layanan pasar Kota Madiun"
-        url="https://domain-kamu.com/layanan/info-pasar"
+        url="https://pemerintahan-kota-madiun.vercel.app/layanan/info-pasar"
         lang="id"
         structuredData={[
           {

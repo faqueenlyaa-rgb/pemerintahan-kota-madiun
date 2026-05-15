@@ -84,7 +84,7 @@ export function LayananKesehatanPage() {
           ? 'Madiun health services, public health center Madiun, hospital Madiun, clinic Madiun, public health Madiun'
           : 'layanan kesehatan Kota Madiun, puskesmas Madiun, rumah sakit Madiun, klinik Madiun, kesehatan masyarakat Madiun'
       }
-      url="https://domain-kamu.com/layanan/kesehatan"
+      url="https://pemerintahan-kota-madiun.vercel.app/layanan/kesehatan"
       lang={lang}
       structuredData={[
         {

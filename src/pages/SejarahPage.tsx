@@ -14,7 +14,7 @@ export function SejarahPage() {
       title="Sejarah Kota Madiun"
       description="Informasi sejarah berdirinya Pemerintah Kota Madiun, perkembangan pemerintahan, daftar wali kota, serta makna lambang Pemerintah Kota Madiun."
       keywords="Sejarah Kota Madiun, sejarah Pemerintah Kota Madiun, lambang Kota Madiun, profil Madiun"
-      url="https://domain-kamu.com/profil/sejarah"
+      url="https://pemerintahan-kota-madiun.vercel.app/profil/sejarah"
       lang="id"
       structuredData={{
         '@context': 'https://schema.org',

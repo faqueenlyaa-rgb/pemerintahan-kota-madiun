@@ -154,7 +154,7 @@ export function MadiunTerkiniPage() {
         title={seoText[lang].title}
         description={seoText[lang].description}
         keywords={seoText[lang].keywords}
-        url="https://domain-kamu.com/madiun-terkini"
+        url="https://pemerintahan-kota-madiun.vercel.app/madiun-terkini"
         lang={lang}
         structuredData={[
           {
@@ -166,7 +166,7 @@ export function MadiunTerkiniPage() {
                 ? 'A collection page for the latest Madiun City information, including agendas, government news, media links, releases, announcements, and job vacancies.'
                 : 'Halaman kumpulan informasi terbaru Kota Madiun, termasuk agenda, berita pemerintahan, tautan media, rilis, pengumuman, dan lowongan.',
             inLanguage: lang === 'en' ? 'en-US' : 'id-ID',
-            url: 'https://domain-kamu.com/madiun-terkini',
+            url: 'https://pemerintahan-kota-madiun.vercel.app/madiun-terkini',
             publisher: {
               '@type': 'GovernmentOrganization',
               name: 'Pemerintah Kota Madiun',
@@ -180,7 +180,7 @@ export function MadiunTerkiniPage() {
               {
                 '@type': 'WebPage',
                 name: 'Berita Pemerintahan',
-                url: 'https://domain-kamu.com/madiun-terkini/berita-pemerintahan',
+                url: 'https://pemerintahan-kota-madiun.vercel.app/madiun-terkini/berita-pemerintahan',
               },
               {
                 '@type': 'WebPage',

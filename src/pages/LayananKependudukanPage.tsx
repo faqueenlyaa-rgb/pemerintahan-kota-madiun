@@ -109,7 +109,7 @@ export function LayananKependudukanPage() {
           ? 'Madiun population services, Madiun ID card, Madiun family card, birth certificate Madiun, civil administration Madiun'
           : 'layanan kependudukan Kota Madiun, KTP Madiun, Kartu Keluarga Madiun, akta kelahiran Madiun, administrasi kependudukan Madiun'
       }
-      url="https://domain-kamu.com/layanan/kependudukan"
+      url="https://pemerintahan-kota-madiun.vercel.app/layanan/kependudukan"
       lang={lang}
       structuredData={[
         {

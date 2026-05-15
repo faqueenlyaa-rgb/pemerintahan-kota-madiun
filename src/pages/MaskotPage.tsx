@@ -98,7 +98,7 @@ export function MaskotPage() {
       title="Maskot Kota Madiun"
       description="Informasi maskot Kota Madiun yaitu Madya, Rasa, dan Relo sebagai simbol kekuatan, keramahan, budaya, kemajuan, dan konektivitas Kota Madiun."
       keywords="Maskot Kota Madiun, Madya, Rasa, Relo, Kota Pendekar, maskot Madiun"
-      url="https://domain-kamu.com/profil/maskot"
+      url="https://pemerintahan-kota-madiun.vercel.app/profil/maskot"
       lang="id"
       structuredData={[
         {

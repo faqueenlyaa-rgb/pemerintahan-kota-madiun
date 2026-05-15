@@ -406,7 +406,7 @@ export function PerangkatDaerahPage() {
       title="Perangkat Daerah Kota Madiun"
       description="Informasi daftar perangkat daerah, organisasi perangkat daerah, dan alamat OPD di lingkungan Pemerintah Kota Madiun."
       keywords="Perangkat Daerah Kota Madiun, OPD Kota Madiun, alamat OPD Madiun, Pemerintah Kota Madiun"
-      url="https://domain-kamu.com/profil/perangkat-daerah"
+      url="https://pemerintahan-kota-madiun.vercel.app/profil/perangkat-daerah"
       lang="id"
       structuredData={{
         '@context': 'https://schema.org',

@@ -508,7 +508,7 @@ export function UmkmPage() {
             ? 'Madiun MSME data, Madiun business sector, MSME dashboard, Madiun economy'
             : 'UMKM Kota Madiun, data UMKM Madiun, dashboard UMKM, sektor usaha Madiun, ekonomi Madiun'
         }
-        url="https://domain-kamu.com/umkm"
+        url="https://pemerintahan-kota-madiun.vercel.app/umkm"
         lang={lang}
         structuredData={[
           {

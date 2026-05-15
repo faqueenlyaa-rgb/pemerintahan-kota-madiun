@@ -12,7 +12,7 @@ export function RilisPage() {
         title="Rilis Kota Madiun"
         description="Halaman rilis Kota Madiun berisi informasi rilis resmi dan publikasi terbaru dari Pemerintah Kota Madiun."
         keywords="Rilis Kota Madiun, rilis resmi Madiun, publikasi Pemerintah Kota Madiun, berita resmi Madiun"
-        url="https://domain-kamu.com/madiun-terkini/rilis"
+        url="https://pemerintahan-kota-madiun.vercel.app/madiun-terkini/rilis"
         lang="id"
         structuredData={{
           '@context': 'https://schema.org',

@@ -684,7 +684,7 @@ export function FasilitasPage() {
       title="Fasilitas Kota Madiun"
       description="Informasi fasilitas Kota Madiun yang mendukung aktivitas masyarakat, wisata, pelayanan publik, dan kebutuhan kota."
       keywords="Fasilitas Kota Madiun, fasilitas publik Madiun, sarana prasarana Madiun, Kota Madiun"
-      url="https://domain-kamu.com/fasilitas"
+      url="https://pemerintahan-kota-madiun.vercel.app/fasilitas"
       lang="id"
       structuredData={[
         {
@@ -696,7 +696,7 @@ export function FasilitasPage() {
               ? 'A public facility information page containing facilities, public services, public spaces, and supporting infrastructure in Madiun City.'
               : 'Halaman informasi fasilitas publik yang berisi fasilitas, layanan umum, ruang publik, dan sarana pendukung di Kota Madiun.',
           inLanguage: lang === 'en' ? 'en-US' : 'id-ID',
-          url: 'https://domain-kamu.com/fasilitas',
+          url: 'https://pemerintahan-kota-madiun.vercel.app/fasilitas',
           publisher: {
             '@type': 'GovernmentOrganization',
             name: 'Pemerintah Kota Madiun',

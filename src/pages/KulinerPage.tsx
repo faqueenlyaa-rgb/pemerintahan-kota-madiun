@@ -496,7 +496,7 @@ export function KulinerPage() {
           ? 'Madiun culinary guide, Madiun food, pecel Madiun, cafes in Madiun, hangout spots in Madiun, Madiun souvenirs'
           : 'kuliner Kota Madiun, rekomendasi kuliner Madiun, pecel enak di Madiun, cafe di Madiun, tempat nongkrong di Madiun, oleh-oleh khas Madiun'
       }
-      url="https://domain-kamu.com/kuliner"
+      url="https://pemerintahan-kota-madiun.vercel.app/kuliner"
       lang={lang}
       structuredData={[
         {
@@ -511,7 +511,7 @@ export function KulinerPage() {
               ? 'A culinary information page containing food recommendations, cafes, hangout spots, local dishes, and typical souvenirs from Madiun City.'
               : 'Halaman informasi kuliner yang berisi rekomendasi makanan, kafe, tempat nongkrong, makanan khas, dan oleh-oleh khas Kota Madiun.',
           inLanguage: lang === 'en' ? 'en-US' : 'id-ID',
-          url: 'https://domain-kamu.com/kuliner',
+          url: 'https://pemerintahan-kota-madiun.vercel.app/kuliner',
           publisher: {
             '@type': 'GovernmentOrganization',
             name: 'Pemerintah Kota Madiun',

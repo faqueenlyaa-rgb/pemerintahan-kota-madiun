@@ -12,7 +12,7 @@ export function PengumumanPage() {
         title="Pengumuman Kota Madiun"
         description="Halaman pengumuman Kota Madiun berisi informasi resmi, pemberitahuan publik, dan pengumuman terbaru dari Pemerintah Kota Madiun."
         keywords="Pengumuman Kota Madiun, pengumuman resmi Madiun, informasi publik Madiun, Pemerintah Kota Madiun"
-        url="https://domain-kamu.com/madiun-terkini/pengumuman"
+        url="https://pemerintahan-kota-madiun.vercel.app/madiun-terkini/pengumuman"
         lang="id"
         structuredData={{
           '@context': 'https://schema.org',

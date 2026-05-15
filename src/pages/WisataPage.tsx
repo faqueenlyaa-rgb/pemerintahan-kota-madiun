@@ -299,7 +299,7 @@ export function WisataPage() {
         title={seoText[lang].title}
         description={seoText[lang].description}
         keywords={seoText[lang].keywords}
-        url="https://domain-kamu.com/wisata"
+        url="https://pemerintahan-kota-madiun.vercel.app/wisata"
         lang={lang}
         structuredData={[
           {
@@ -311,7 +311,7 @@ export function WisataPage() {
                 ? 'A tourism information page containing recommendations for tourist attractions, public spaces, and places to visit in Madiun City.'
                 : 'Halaman informasi wisata yang berisi rekomendasi tempat wisata, ruang publik, dan tempat yang dapat dikunjungi di Kota Madiun.',
             inLanguage: lang === 'en' ? 'en-US' : 'id-ID',
-            url: 'https://domain-kamu.com/wisata',
+            url: 'https://pemerintahan-kota-madiun.vercel.app/wisata',
             publisher: {
               '@type': 'GovernmentOrganization',
               name: 'Pemerintah Kota Madiun',

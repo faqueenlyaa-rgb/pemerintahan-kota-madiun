@@ -135,7 +135,7 @@ export function PenginapanPage() {
           ? 'Madiun accommodation, hotels in Madiun, guest house in Madiun, places to stay in Madiun'
           : 'penginapan Kota Madiun, hotel di Madiun, guest house Madiun, penginapan dekat pusat kota Madiun'
       }
-      url="https://domain-kamu.com/penginapan"
+      url="https://pemerintahan-kota-madiun.vercel.app/penginapan"
       lang={lang}
       structuredData={[
         {
@@ -150,7 +150,7 @@ export function PenginapanPage() {
               ? 'A lodging information page containing accommodation recommendations, hotels, guest houses, and places to stay in Madiun City.'
               : 'Halaman informasi penginapan yang berisi rekomendasi akomodasi, hotel, guest house, dan tempat menginap di Kota Madiun.',
           inLanguage: lang === 'en' ? 'en-US' : 'id-ID',
-          url: 'https://domain-kamu.com/penginapan',
+          url: 'https://pemerintahan-kota-madiun.vercel.app/penginapan',
           publisher: {
             '@type': 'GovernmentOrganization',
             name: 'Pemerintah Kota Madiun',
