@@ -14,6 +14,7 @@ import {
   Building,
   Landmark,
   ArrowLeft,
+  ChevronDown,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../lib/i18n';
@@ -702,6 +703,16 @@ export function FasilitasPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState<'name' | 'rating'>('rating');
   const [showFilters, setShowFilters] = useState(false);
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+
+  const toggleSection = (sectionKey: string) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionKey]: !(prev[sectionKey] ?? true),
+    }));
+  };
+
+  const isSectionOpen = (sectionKey: string) => openSections[sectionKey] ?? true;
 
   const filteredItems = fasilitasItems
     .filter((item) => {
@@ -979,125 +990,166 @@ export function FasilitasPage() {
           </p>
         </div>
 
-        {/* Fasilitas Sections */}
+        {/* Fasilitas Sections Accordion */}
         {sectionedItems.length > 0 && (
-          <div className="space-y-12">
-            {sectionedItems.map((section) => (
-              <section key={section.key}>
-                <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
-                    {getCategoryIcon(section.key)}
-                  </div>
+          <div className="space-y-6">
+            {sectionedItems.map((section) => {
+              const open = isSectionOpen(section.key);
 
-                  <div>
-                    <h2 className="font-poppins text-2xl font-black text-dark md:text-3xl">
-                      {t(section.labelKey)}
-                    </h2>
+              return (
+                <section
+                  key={section.key}
+                  className="overflow-hidden rounded-[2rem] border-2 border-primary/10 bg-white shadow-md"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleSection(section.key)}
+                    className="flex w-full items-center justify-between gap-4 bg-gradient-to-r from-primary to-[#166b30] px-5 py-5 text-left text-white transition hover:brightness-105 md:px-7"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20">
+                        <div className="text-white">
+                          {getCategoryIcon(section.key)}
+                        </div>
+                      </div>
 
-                    <p className="text-sm font-medium text-gray-500">
-                      {section.items.length} {availableText}
-                    </p>
-                  </div>
-                </div>
+                      <div>
+                        <h2 className="font-poppins text-2xl font-black md:text-3xl">
+                          {t(section.labelKey)}
+                        </h2>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {section.items.map((item, index) => (
+                        <p className="mt-1 text-sm font-medium text-white/80">
+                          {section.items.length} {availableText}
+                        </p>
+                      </div>
+                    </div>
+
+                    <ChevronDown
+                      className={`h-7 w-7 shrink-0 transition-transform duration-300 ${
+                        open ? 'rotate-180' : 'rotate-0'
+                      }`}
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  {open && (
                     <motion.div
-                      key={item.id}
                       initial={{
                         opacity: 0,
-                        y: 20,
+                        height: 0,
                       }}
                       animate={{
                         opacity: 1,
-                        y: 0,
+                        height: 'auto',
+                      }}
+                      exit={{
+                        opacity: 0,
+                        height: 0,
                       }}
                       transition={{
-                        duration: 0.4,
-                        delay: index * 0.05,
+                        duration: 0.25,
                       }}
-                      className="group flex flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-white shadow-md transition-all duration-300 hover:border-primary hover:shadow-xl"
+                      className="p-5 md:p-7"
                     >
-                      {/* Category Badge */}
-                      <div className="bg-gradient-to-r from-primary to-[#166b30] px-4 py-2">
-                        <p className="text-xs font-bold uppercase tracking-wide text-white">
-                          {t(item.categoryKey)}
-                        </p>
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex flex-1 flex-col p-6">
-                        {/* Name */}
-                        <a
-                          href={item.mapsUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/link mb-2 block"
-                        >
-                          <h3 className="flex items-start gap-2 font-poppins text-xl font-bold text-dark transition-colors group-hover/link:text-primary">
-                            {getCategoryIcon(item.categoryKey)}
-                            <span className="flex-1">{item.nama}</span>
-                          </h3>
-                        </a>
-
-                        {/* Subcategory Pill */}
-                        {item.subCategoryKey && (
-                          <div className="mb-3 pl-7">
-                            <span className="inline-block rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-primary">
-                              {t(item.subCategoryKey)}
-                            </span>
-                          </div>
-                        )}
-
-                        {/* Rating */}
-                        <div className="mb-3 flex items-center gap-2 pl-7">
-                          <div className="flex items-center gap-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`h-4 w-4 ${
-                                  i < Math.floor(item.rating)
-                                    ? 'fill-accent text-accent'
-                                    : 'text-gray-300'
-                                }`}
-                              />
-                            ))}
-                          </div>
-
-                          <span className="font-bold text-dark">
-                            {item.rating.toFixed(1)}
-                          </span>
-
-                          <span className="text-sm text-gray-500">/ 5</span>
-                        </div>
-
-                        {/* Description */}
-                        <p className="mb-4 flex-1 pl-7 text-sm leading-relaxed text-gray-600">
-                          {t(item.descKey)}
-                        </p>
-
-                        {/* Button */}
-                        <div className="mt-auto pt-2">
-                          <a
-                            href={item.mapsUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 font-bold text-white transition-all duration-200 hover:bg-[#166b30] group-hover:scale-[1.02]"
+                      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {section.items.map((item, index) => (
+                          <motion.div
+                            key={item.id}
+                            initial={{
+                              opacity: 0,
+                              y: 18,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              y: 0,
+                            }}
+                            transition={{
+                              duration: 0.35,
+                              delay: index * 0.03,
+                            }}
+                            className="group flex flex-col overflow-hidden rounded-2xl border-2 border-transparent bg-[#FAFAFA] shadow-sm transition-all duration-300 hover:border-primary hover:bg-white hover:shadow-xl"
                           >
-                            <ExternalLink className="h-4 w-4" />
-                            {t('fasilitas.openMaps')}
-                          </a>
-                        </div>
+                            {/* Category Badge */}
+                            <div className="bg-gradient-to-r from-primary to-[#166b30] px-4 py-2">
+                              <p className="text-xs font-bold uppercase tracking-wide text-white">
+                                {t(item.categoryKey)}
+                              </p>
+                            </div>
+
+                            {/* Content */}
+                            <div className="flex flex-1 flex-col p-6">
+                              {/* Name */}
+                              <a
+                                href={item.mapsUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group/link mb-2 block"
+                              >
+                                <h3 className="flex items-start gap-2 font-poppins text-xl font-bold text-dark transition-colors group-hover/link:text-primary">
+                                  {getCategoryIcon(item.categoryKey)}
+                                  <span className="flex-1">{item.nama}</span>
+                                </h3>
+                              </a>
+
+                              {/* Subcategory Pill */}
+                              {item.subCategoryKey && (
+                                <div className="mb-3 pl-7">
+                                  <span className="inline-block rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-primary">
+                                    {t(item.subCategoryKey)}
+                                  </span>
+                                </div>
+                              )}
+
+                              {/* Rating */}
+                              <div className="mb-3 flex items-center gap-2 pl-7">
+                                <div className="flex items-center gap-1">
+                                  {[...Array(5)].map((_, i) => (
+                                    <Star
+                                      key={i}
+                                      className={`h-4 w-4 ${
+                                        i < Math.floor(item.rating)
+                                          ? 'fill-accent text-accent'
+                                          : 'text-gray-300'
+                                      }`}
+                                    />
+                                  ))}
+                                </div>
+
+                                <span className="font-bold text-dark">
+                                  {item.rating.toFixed(1)}
+                                </span>
+
+                                <span className="text-sm text-gray-500">/ 5</span>
+                              </div>
+
+                              {/* Description */}
+                              <p className="mb-4 flex-1 pl-7 text-sm leading-relaxed text-gray-600">
+                                {t(item.descKey)}
+                              </p>
+
+                              {/* Button */}
+                              <div className="mt-auto pt-2">
+                                <a
+                                  href={item.mapsUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 font-bold text-white transition-all duration-200 hover:bg-[#166b30] group-hover:scale-[1.02]"
+                                >
+                                  <ExternalLink className="h-4 w-4" />
+                                  {t('fasilitas.openMaps')}
+                                </a>
+                              </div>
+                            </div>
+                          </motion.div>
+                        ))}
                       </div>
                     </motion.div>
-                  ))}
-                </div>
-              </section>
-            ))}
+                  )}
+                </section>
+              );
+            })}
           </div>
         )}
-
-        {/* No Results */}
         {filteredItems.length === 0 && (
           <div className="py-16 text-center">
             <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
