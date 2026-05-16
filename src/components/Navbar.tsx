@@ -1,8 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../lib/i18n';
+
+type NavItem = {
+  name: string;
+  href: string;
+  isExternal?: boolean;
+  dropdown?: NavItem[];
+  subDropdown?: NavItem[];
+};
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -403,11 +412,10 @@ export function Navbar() {
 
               <div className="flex-1 overflow-y-auto py-4 px-4">
                 <a
-                href="https://madiunkota.go.id/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-800 font-bold hover:bg-green-50 mb-2">
-                
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-800 font-bold hover:bg-primary/10 transition-colors"
+                >
                   <Home className="w-5 h-5 text-primary" /> {t('nav.home')}
                 </a>
 

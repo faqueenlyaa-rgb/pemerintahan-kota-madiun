@@ -1,0 +1,15 @@
+# Pemerintahan Kota Madiun
+
+Website informasi Pemerintahan Kota Madiun berisi profil kota, layanan publik, berita, wisata, pengaduan, kontak, dan informasi pemerintahan.
+
+## Halaman penting
+
+- Beranda: https://pemerintahan-kota-madiun.vercel.app/
+- Layanan Publik: https://pemerintahan-kota-madiun.vercel.app/#layanan
+- Berita: https://pemerintahan-kota-madiun.vercel.app/#berita
+- Jelajah Kota: https://pemerintahan-kota-madiun.vercel.app/#jelajah
+- FAQ: https://pemerintahan-kota-madiun.vercel.app/#faq
+
+## Keyword utama
+
+Pemerintah Kota Madiun, Pemkot Madiun, Kota Madiun, layanan publik Madiun, wisata Kota Madiun, berita Madiun, pengaduan masyarakat Madiun.
