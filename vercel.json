@@ -1,10 +1,10 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  {
+    "source": "/((?!assets|images|data|robots.txt|sitemap.xml|favicon.ico|google.*\\.html).*)",
+    "destination": "/index.html"
+  }
+],
 
   "headers": [
     {
