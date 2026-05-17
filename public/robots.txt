@@ -10,4 +10,4 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-Sitemap:https://pemerintahan-kota-madiun.vercel.app/sitemap.xml
+sitemap:https://pemerintahan-kota-madiun.vercel.app/sitemap.xml
